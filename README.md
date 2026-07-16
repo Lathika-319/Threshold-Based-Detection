@@ -1,124 +1,151 @@
-# ⏳ Threshold-Based Detection
+# 🚨 Threshold-Based Detection for Chain Snatching
 
-A machine learning project developed during the UpToSkills  Internship. This project demonstrates Threshold-Based-Detection for analyzing sequential data and improving prediction performance using deep learning.
+A deep learning project developed during the UpToSkills Internship that identifies potential chain snatching events from CCTV videos using a CNN-based threshold detection approach, YOLO object detection, and motion analysis.
 
 ---
 
 ## 📖 Project Overview
 
-This project focuses on Threshold-Based-Detection, a technique used to combine information from multiple time steps or sequential inputs to improve machine learning model performance.
+This project implements a threshold-based detection pipeline for identifying chain snatching events in surveillance videos. Video frames are processed using OpenCV, classified with a Convolutional Neural Network (CNN), and verified using a confidence threshold. YOLO is used to detect people in each frame, while speed estimation and CSV logging provide additional event analysis.
 
-The implementation and experiments were carried out using Kaggle Notebook.
+The complete implementation was developed and tested using Kaggle Notebook.
 
 ---
 
 ## 🎯 Objectives
 
-- Understand Threshold-Based-Detection.
-- Analyze sequential data efficiently.
-- Build and evaluate a deep learning model.
-- Perform model training and prediction using Kaggle.
+- Detect possible chain snatching events from CCTV footage.
+- Classify video frames using a CNN model.
+- Apply a confidence threshold to reduce false detections.
+- Detect people using YOLO object detection.
+- Record predictions for further analysis.
 
 ---
 
 ## 📂 Dataset
 
+The project uses CCTV video frames collected for chain snatching detection experiments.
 The dataset used for this project is publicly available on Kaggle.
 
-**Dataset Link:** (https://www.kaggle.com/code/lathika04/chain-snaching-project?select=Chain_Snatching_Videos),https://www.kaggle.com/code/lathika04/chain-snaching-project,https://www.kaggle.com/code/lathika04/chain-snaching-project,https://www.kaggle.com/code/lathika04/chain-snaching-project,https://www.kaggle.com/code/lathika04/chain-snaching-project,https://www.kaggle.com/code/lathika04/chain-snaching-project,https://www.kaggle.com/code/lathika04/chain-snaching-project
+Dataset Link: (https://www.kaggle.com/code/lathika04/chain-snaching-project?select=Chain_Snatching_Videos),https://www.kaggle.com/code/lathika04/chain-snaching-project,https://www.kaggle.com/code/lathika04/chain-snaching-project,https://www.kaggle.com/code/lathika04/chain-snaching-project,https://www.kaggle.com/code/lathika04/chain-snaching-project,https://www.kaggle.com/code/lathika04/chain-snaching-project,https://www.kaggle.com/code/lathika04/chain-snaching-project
 
-> The dataset is not included in this repository due to its size.
 
----
-
-## 🧹 Data Preprocessing
-
-- Data cleaning
-- Handling missing values
-- Feature engineering
-- Data normalization
-- Train-test split
+> Due to the dataset size, it is not included in this repository.
 
 ---
 
-## 🤖 Model Development
+## 🧹 Methodology
 
-The project includes:
+### 1️⃣ Frame Extraction
+- Read CCTV videos frame by frame using OpenCV.
+- Resize each frame to **128 × 128 pixels**.
+- Normalize pixel values before prediction.
 
-- Data preprocessing
-- Temporal feature aggregation
-- Model training
-- Model evaluation
-- Prediction and visualization
+### 2️⃣ CNN Model Training
+- Build a 3-layer Convolutional Neural Network.
+- Train using TensorFlow/Keras.
+- Optimize using the Adam optimizer.
+
+### 3️⃣ Threshold-Based Detection
+- Predict the confidence score for every frame.
+- If the confidence is **0.65 or above**, classify the frame as a chain snatching event.
+
+### 4️⃣ YOLO Object Detection
+- Detect people in every frame.
+- Draw bounding boxes around detected persons.
+
+### 5️⃣ CSV Event Logging
+- Store frame number, prediction, confidence score, and timestamp.
+
+### 6️⃣ Speed Verification
+- Calculate centroid movement between consecutive frames.
+- Use motion speed as an additional verification step.
 
 ---
 
 ## 💻 Features
 
-- 📊 Data Analysis
-- 🧠 Machine Learning Model
-- 📈 Performance Evaluation
-- 📉 Prediction Visualization
-- 📑 Kaggle Notebook Implementation
+- 🎥 CCTV Video Processing
+- 🖼️ Frame Extraction
+- 🧠 CNN-Based Classification
+- 📊 Threshold Decision Making
+- 👤 YOLO Person Detection
+- 📈 Confidence Score Prediction
+- 🚶 Motion Speed Analysis
+- 📄 CSV Event Logging
+- 🎬 Annotated Output Video
 
 ---
 
 ## 🛠️ Technologies Used
 
 - Python
-- Kaggle Notebook
-- Pandas
+- TensorFlow / Keras
+- OpenCV
+- YOLO
 - NumPy
+- Pandas
 - Matplotlib
-- Scikit-learn
+- Kaggle Notebook
 
 ---
 
 ## 📁 Repository Structure
 
 ```
-temporal-aggregation/
+Threshold-Based-Detection/
 │
 ├── README.md
 ├── LICENSE
-├── temporal_aggregation.ipynb
-├── images/
-├── docs/
-└── requirements.txt
+├── chain-snaching-project.ipynb
+├── Image.png
+└── output_video.mp4 (Demo)
 ```
 
 ---
 
 ## ▶️ How to Run
 
-1. Clone this repository
+1. Clone the repository
 
 ```bash
-git clone https://github.com/Lathika-319/temporal-aggregation.git
+git clone https://github.com/Lathika-319/Threshold-Based-Detection.git
 ```
 
-2. Install dependencies
+2. Install the required libraries
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Open the notebook using Jupyter Notebook or Kaggle and run all cells.
+3. Open the notebook in Kaggle or Jupyter Notebook.
+
+4. Run all notebook cells.
 
 ---
 
+## 📸 Project Methodology
+
+The workflow of the proposed threshold-based detection system is shown below.
+
+![Threshold-Based Detection Methodology](Image.png)
+
+
 ## 🔗 Kaggle Notebook
 
-**Notebook:** https://www.kaggle.com/code/lathika04/chain-snaching-project
+The complete implementation is available on Kaggle:
+
+https://www.kaggle.com/code/lathika04/chain-snaching-project
 
 ---
 
 ## 🚀 Future Enhancements
 
-- Improve model accuracy
-- Train on larger datasets
-- Optimize preprocessing techniques
-- Deploy as a web application
+- Improve CNN accuracy using a larger dataset.
+- Integrate real-time CCTV monitoring.
+- Support multi-camera surveillance.
+- Reduce false positives using temporal analysis.
+- Deploy as a web application.
 
 ---
 
