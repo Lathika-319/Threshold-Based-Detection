@@ -124,12 +124,6 @@ pip install -r requirements.txt
 
 ---
 
-## 📸 Project Methodology
-
-The workflow of the proposed threshold-based detection system is shown below.
-
-![Threshold-Based Detection Methodology](Image.png)
-
 
 ## 🔗 Kaggle Notebook
 
