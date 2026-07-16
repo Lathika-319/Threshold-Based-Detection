@@ -1,12 +1,12 @@
 # ⏳ Threshold-Based Detection
 
-A machine learning project developed during the UpToSkills Virtual Internship. This project demonstrates temporal aggregation techniques for analyzing sequential data and improving prediction performance using deep learning.
+A machine learning project developed during the UpToSkills  Internship. This project demonstrates Threshold-Based-Detection for analyzing sequential data and improving prediction performance using deep learning.
 
 ---
 
 ## 📖 Project Overview
 
-This project focuses on temporal aggregation, a technique used to combine information from multiple time steps or sequential inputs to improve machine learning model performance.
+This project focuses on Threshold-Based-Detection, a technique used to combine information from multiple time steps or sequential inputs to improve machine learning model performance.
 
 The implementation and experiments were carried out using Kaggle Notebook.
 
@@ -14,7 +14,7 @@ The implementation and experiments were carried out using Kaggle Notebook.
 
 ## 🎯 Objectives
 
-- Understand temporal aggregation techniques.
+- Understand Threshold-Based-Detection.
 - Analyze sequential data efficiently.
 - Build and evaluate a deep learning model.
 - Perform model training and prediction using Kaggle.
