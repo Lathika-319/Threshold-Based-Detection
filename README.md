@@ -1,4 +1,4 @@
-# ⏳ Temporal Aggregation using Deep Learning
+# ⏳ Threshold-Based Detection
 
 A machine learning project developed during the UpToSkills Virtual Internship. This project demonstrates temporal aggregation techniques for analyzing sequential data and improving prediction performance using deep learning.
 
